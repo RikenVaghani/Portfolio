@@ -64,7 +64,10 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;padding:16px 0;backdrop-filt
 .nav-links{display:flex;gap:32px;list-style:none}
 .nav-links a{font-size:.86rem;color:var(--muted);font-weight:500;transition:color .3s;letter-spacing:.02em}
 .nav-links a:hover{color:var(--text)}
-.nav-right{display:flex;align-items:center;gap:12px}
+.nav-right{display:flex;align-items:center;gap:16px}
+.nav-social{display:flex;gap:16px;margin-right:8px}
+.nav-social-link{color:var(--muted);font-size:1.1rem;transition:color .3s;text-decoration:none}
+.nav-social-link:hover{color:var(--accent)}
 .theme-toggle{width:38px;height:38px;border-radius:50%;background:var(--surface);border:1px solid var(--border2);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1rem;transition:all .3s;color:var(--text)}
 .theme-toggle:hover{border-color:var(--accent);transform:rotate(20deg)}
 .nav-cta{padding:9px 22px;border-radius:100px;background:var(--accent);color:#fff;font-size:.84rem;font-weight:600;transition:all .3s;border:none;cursor:pointer;font-family:'Outfit',sans-serif}
@@ -154,6 +157,35 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;padding:16px 0;backdrop-filt
 .about-card-icon{font-size:1.4rem;flex-shrink:0;margin-top:2px}
 .about-card-title{font-family:'Syne',sans-serif;font-weight:700;font-size:.95rem;margin-bottom:4px}
 .about-card-text{font-size:.84rem;color:var(--muted);line-height:1.6}
+
+/* ── Profile Image ────────────────────────────────── */
+.profile-img-container {
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 1;
+  border-radius: var(--r);
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 24px;
+  border: 1px solid var(--border2);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+.profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.profile-img-container:hover .profile-img {
+  transform: scale(1.05);
+}
+.profile-img-container::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 60%, rgba(7,7,16,0.6));
+  pointer-events: none;
+}
 
 /* ── Skills ────────────────────────────────────────── */
 #skills{background:var(--bg2)}

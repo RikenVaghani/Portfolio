@@ -128,7 +128,7 @@ if (form) {
         msg.style.color='var(--accent3)';
         form.reset();
       } else {
-        msg.textContent='❌ Something went wrong. Please email directly.';
+        msg.textContent='❌ Error: ' + (data.message || 'Something went wrong.');
         msg.style.color='#ff6e6e';
       }
     }catch{
